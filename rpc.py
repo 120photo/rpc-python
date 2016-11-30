@@ -21,12 +21,13 @@ def the_game():
     if user_play not in [1,2,3]:
         print("Not a valid option, chose again")
         the_game()
-    if computer_guess == user_play:
-        print("Draw, computer drew {} and you drew {}".format(weapons[computer_guess], weapons[user_play]))
-    if computer_guess == 1 and user_play == 3 or computer_guess == 2 and user_play == 1 or computer_guess == 3 and user_play == 2:
-        print("You Lose the Match")
     else:
-        print("You Win the Match")
-    print("Computer Played {}. You Played {}".format(weapons[computer_guess], weapons[user_play]))
+        if computer_guess == user_play:
+            print("Draw, computer drew {} and you drew {}".format(weapons[computer_guess], weapons[user_play]))
+        if computer_guess == 1 and user_play == 3 or computer_guess == 2 and user_play == 1 or computer_guess == 3 and user_play == 2:
+            print("You Lose the Match")
+        else:
+            print("You Win the Match")
+        print("Computer Played {}. You Played {}".format(weapons[computer_guess], weapons[user_play]))
 
 the_game()
